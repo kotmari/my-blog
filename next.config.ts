@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
         port: ''
       },
       {
-        hostname: "outstanding-elk-107.convex.cloud",
+        hostname: "accurate-wildebeest-88.convex.cloud",
         protocol: "https",
         port: ''
       },
