@@ -45,6 +45,7 @@ export const getPosts = query({
     )
   },
 });
+
 export const getMyPosts = query({
   args: {},
   handler: async (ctx) => {

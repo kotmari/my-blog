@@ -8,10 +8,11 @@ import {
 import { Skeleton } from "@/components/ui/skeleton";
 import { api } from "@/convex/_generated/api";
 import { fetchQuery } from "convex/nextjs";
-import { cacheLife, cacheTag } from "next/cache";
+
 import Link from "next/link";
 import Image from "next/image";
 import { Suspense } from "react";
+import { connection } from "next/server";
 
 export default function Home() {
   return (
@@ -32,10 +33,10 @@ export default function Home() {
 }
 
 async function LoadBlogListHome() {
-  "use cache";
-  cacheLife("hours");
-  cacheTag("blog");
-
+  // "use cache";
+  // cacheLife("hours");
+  // cacheTag("blog");
+ await connection()
   const data = await fetchQuery(api.posts.getPosts);
 
 
